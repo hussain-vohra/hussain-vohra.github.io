@@ -208,7 +208,7 @@ function contactFormSetup() {
         if( required === 0 ) {
             $.ajax({
                 type: 'POST',
-                url: 'mail.php',
+                url: 'https://usebasin.com/f/4a38e0003a1c',
                 data: {
                     cf_name: name,
                     cf_email: email,
@@ -216,10 +216,10 @@ function contactFormSetup() {
                 },
                 success: function(data) {
                     $("#contact-form .input-field").val("");
-                    showAlertBox(data.status, data.responseText);
+                    showAlertBox(data.status, "Thank You! Your message has been sent.");
                 },
                 error: function(data) {
-                    showAlertBox(data.status, data.responseText);
+                    showAlertBox(data.status, "Oops! Something went wrong and we couldn't send your message.");
                 }
             });
         }
