@@ -216,10 +216,10 @@ function contactFormSetup() {
                 },
                 success: function(data) {
                     $("#contact-form .input-field").val("");
-                    showAlertBox(data.status, "Thank You! Your message has been sent.");
+                    showAlertBox(data.status, "Oops! Something went wrong and we couldn't send your message.");
                 },
                 error: function(data) {
-                    showAlertBox(data.status, "Oops! Something went wrong and we couldn't send your message.");
+                    showAlertBox(data.status, "Thank You! Your message has been sent.");
                 }
             });
         }
