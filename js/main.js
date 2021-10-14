@@ -208,7 +208,7 @@ function contactFormSetup() {
         if( required === 0 ) {
             $.ajax({
                 type: 'POST',
-                url: 'https://usebasin.com/f/4a38e0003a1c',
+                url: 'https://formspree.io/f/xvodnpry',
                 data: {
                     cf_name: name,
                     cf_email: email,
