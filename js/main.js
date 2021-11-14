@@ -208,7 +208,7 @@ function contactFormSetup() {
         if( required === 0 ) {
             $.ajax({
                 type: 'POST',
-                url: 'https://formspree.io/f/xvodnpry',
+                url: 'mail.php',
                 data: {
                     cf_name: name,
                     cf_email: email,
@@ -216,10 +216,10 @@ function contactFormSetup() {
                 },
                 success: function(data) {
                     $("#contact-form .input-field").val("");
-                    showAlertBox(data.status, "Oops! Something went wrong and we couldn't send your message.");
+                    showAlertBox(data.status, data.responseText);
                 },
                 error: function(data) {
-                    showAlertBox(data.status, "Thank You! Your message has been sent.");
+                    showAlertBox(data.status, data.responseText);
                 }
             });
         }
